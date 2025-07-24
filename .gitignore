@@ -1,7 +1,3 @@
 # Visual Studio Code
 
 *.vscode
-
-# Arquivos .Env
-
-*.env

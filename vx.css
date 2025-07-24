@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+#suporte-text {
+    color: #5865F2;
+}
+
+#btn-discord {
+    background-color: #5865F2;
+}
+
+#btn-discord:hover {
+    background-color: #525fe6;
+}
