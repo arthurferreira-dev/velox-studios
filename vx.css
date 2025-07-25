@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#suporte-text {
+#suporte-text, #discord-text {
     color: #5865F2;
 }
 
@@ -10,4 +10,13 @@
 
 #btn-discord:hover {
     background-color: #525fe6;
+}
+
+#title-border {
+    border-top-left-radius: 6px; /* roudend-md */
+    border-top-right-radius: 6px;
+}
+
+#discord-text:hover {
+    text-decoration: underline;
 }

@@ -1,53 +1,48 @@
-let OptionsInfo = document.querySelector('#informations-options');
-let LoreOptions = document.querySelector('#lore-options');
-let SuportOptions = document.querySelector('#suporte-options');
-let click = true // clicks do usuário
+window.onload = ImageRezises;
+window.onresize = ImageRezises;
 
-function GamesInfo() {
-    let ArrowDownGames = document.querySelector('i#arrow-down-line-games');
+UpdateLink('discord-text', 'https://discord.gg/tFptYz9rUA');
 
-    if (click) {
-        ArrowDownGames.classList.remove('ri-arrow-down-s-line');
-        ArrowDownGames.classList.add('ri-arrow-up-s-line');
-        OptionsInfo.classList.remove('hidden');
-        click = false
+let click = null;
+
+function Toggle(sectionId, arrowId) {
+    const Sections = document.getElementById(sectionId);
+    const Arrows = document.getElementById(arrowId);
+
+    const Visible = !Sections.classList.contains('hidden');
+
+    document.querySelectorAll('#informations-options, #lore-options, #suporte-options').forEach(sec => {
+    sec.classList.add('hidden') 
+    });
+
+    document.querySelectorAll('#arrow-down-line-games, #arrow-down-line-lore, #arrow-down-line-suport').forEach(Arrows => {
+        Arrows.classList.remove('ri-arrow-up-s-line');
+        Arrows.classList.add('ri-arrow-down-s-line');
+    });
+
+    if (!Visible) {
+        Sections.classList.remove('hidden');
+        Arrows.classList.remove('ri-arrow-down-s-line');
+        Arrows.classList.add('ri-arrow-up-s-line');
+        click = sectionId;
     } else {
-        ArrowDownGames.classList.remove('ri-arrow-up-s-line');
-        ArrowDownGames.classList.add('ri-arrow-down-s-line');
-        OptionsInfo.classList.add('hidden');
-        click = true
+        click = null;
     }
 }
 
-function LoreInfo() {
-    let ArrowDownLore = document.querySelector('i#arrow-down-line-lore');
+function ImageRezises() {
+    let img = document.querySelector('img#img-principal');
 
-    if (click) {
-        ArrowDownLore.classList.remove('ri-arrow-down-s-line');
-        ArrowDownLore.classList.add('ri-arrow-up-s-line');
-        LoreOptions.classList.remove('hidden');
-        click = false
-    } else {
-        ArrowDownLore.classList.add('ri-arrow-down-s-line');
-        ArrowDownLore.classList.remove('ri-arrow-up-s-line');
-        LoreOptions.classList.add('hidden');
-        click = true
+    if (window.innerWidth >= 701) {
+        img.src = 'network/sprites.png'
+        img.classList.add('w-[64%]', 'h-[500px]', 'm-auto', 'relative', 'rounded-lg');
+    } else if (window.innerWidth <= 700 && window.innerWidth >= 500 || window.innerWidth < 500) {
+        img.src = 'network/sprites-500.png'
+        img.classList.add('w-[100%]', 'h-[400px]', 'm-auto', 'relative', 'rounded-lg')
     }
 }
 
-function SuportInfo() {
-    let ArrowDownSuport = document.querySelector('i#arrow-down-line-suport');
-
-    if (click) {
-        ArrowDownSuport.classList.remove('ri-arrow-down-s-line');
-        ArrowDownSuport.classList.add('ri-arrow-up-s-line');
-        SuportOptions.classList.remove('hidden');
-        click = false
-    } else {
-        ArrowDownSuport.classList.remove('ri-arrow-up-s-line');
-        ArrowDownSuport.classList.add('ri-arrow-down-s-line');
-        SuportOptions.classList.add('hidden');
-        click = true
-    }
-
+function UpdateLink(id, url) {
+    let link = document.getElementById(id);
+    link.href = url
 }

@@ -7,19 +7,27 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">/*Tailwind CSS v4.1*/</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
     <link rel="stylesheet" href="vx.css">
+    <!--Favicons-->
+    <link rel="shortcut icon" href="network/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="network/favicon/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="network/favicon/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon" href="network/favicon/apple-touch-icon.png" type="image/png">
+    <link rel="icon" sizes="192x192" href="network/favicon/android-chrome-192x192.png" type="image/png">
+    <link rel="icon" sizes="512x512" href="network/favicon/android-chrome-512x512.png" type="image/png">
+    <link rel="manifest" href="network/favicon/site.webmanifest">
 </head>
 <body class="text-white bg-gray-700">
     <header class="p-2 bg-gray-500">
         <div id="menu-responsive" class="flex flex-row flex-nowrap justify-between">
             <img src="network/velox-studios.png" alt="Voxel Studios - Logo">
             <div id="options-menu" class="flex flex-row flex-nowrap text-lg max-[500px]:text-base">
-                <button class="m-3 max-[500px]:m-2" onclick="GamesInfo()">
+                <button class="m-3 max-[500px]:m-2" onclick="Toggle('informations-options', 'arrow-down-line-games')">
                     Jogos <i class="ri-arrow-down-s-line" id="arrow-down-line-games"></i> <!--<i class="ri-arrow-up-s-line"></i>-->
                 </button>
-                <button class="m-3 max-[500px]:m-1" onclick="LoreInfo()"> <!--colocar media query pro iphone 5-->
+                <button class="m-3 max-[500px]:m-1" onclick="Toggle('lore-options', 'arrow-down-line-lore')"> <!--colocar media query pro iphone 5-->
                     Lore <i class="ri-arrow-down-s-line" id="arrow-down-line-lore"></i>
                 </button>
-                <button class="m-3 max-[500px]:m-2" onclick="SuportInfo()">
+                <button class="m-3 max-[500px]:m-2" onclick="Toggle('suporte-options', 'arrow-down-line-suport')">
                     Suporte <i class="ri-arrow-down-s-line" id="arrow-down-line-suport"></i>
                 </button>
             </div>
@@ -70,6 +78,29 @@
             </div>
         </div>
     </div>
+
+    <main class="mt-4">
+        <div id="img-main">
+            <img src="" alt="" class="" id="img-principal">
+        </div>
+        <div class="flex flex-row flex-nowrap justify-center items-center">
+            <div id="desc-img" class="text-center absolute z-10">
+                <h1 class="text-2xl font-mono font-semibold bg-gray-800 w-[300px] m-auto p-1" id="title-border">
+                    Descontrario
+                </h1>
+                <p class="text-lg max-[500px]:text-base bg-gray-800 p-2 rounded-md">
+                    Se algum dia as duas espadas forem completas, por duas pessoas e essas duas pessoas se encontrarem, as duas <strong>Auras</strong> serão libertas
+                </p>
+            </div>
+        </div>
+        <br>
+        <div id="rest">
+            <h2 class="text-2xl text-center font-mono font-semibold mt-7 max-[500px]:mt-12">Em desenvolvimento..</h2>
+            <img src="network/gamemaker.png" alt="GameMaker - Logotipo" 
+            class="m-auto w-[100px]">
+            <p class="text-center text-lg">Caso queira contribuir com o projeto acesse no Server do <a href="" id="discord-text">Discord</a></p>
+        </div>
+    </main>
 </body>
 <script src="vx.js"></script>
 </html>
