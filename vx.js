@@ -11,11 +11,11 @@ function Toggle(sectionId, arrowId) {
 
     const Visible = !Sections.classList.contains('hidden');
 
-    document.querySelectorAll('#informations-options, #lore-options, #suporte-options').forEach(sec => {
-    sec.classList.add('hidden') 
+    document.querySelectorAll('#informations-options, #lore-options, #suporte-options, #music-options').forEach(sec => {
+        sec.classList.add('hidden') 
     });
 
-    document.querySelectorAll('#arrow-down-line-games, #arrow-down-line-lore, #arrow-down-line-suport').forEach(Arrows => {
+    document.querySelectorAll('#arrow-down-line-games, #arrow-down-line-lore, #arrow-down-line-suport, #arrow-down-line-music').forEach(Arrows => {
         Arrows.classList.remove('ri-arrow-up-s-line');
         Arrows.classList.add('ri-arrow-down-s-line');
     });
