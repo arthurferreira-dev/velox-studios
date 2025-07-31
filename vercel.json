@@ -1,0 +1,7 @@
+{
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "rewrites": [],
+  "headers": [],
+  "trailingSlash": false
+}
