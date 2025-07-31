@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /network/music/
+
+Sitemap: https://velox-studios.vercel.app/sitemap.xml

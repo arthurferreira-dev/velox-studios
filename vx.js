@@ -1,5 +1,10 @@
-window.onload = ImageRezises;
-window.onresize = ImageRezises;
+let time;
+
+window.addEventListener('load', ImageRezises);
+window.addEventListener('resize', () => {
+    clearTimeout(time);
+    time = setTimeout(ImageRezises, 150);
+});
 
 UpdateLink('discord-text', 'https://discord.gg/tFptYz9rUA');
 

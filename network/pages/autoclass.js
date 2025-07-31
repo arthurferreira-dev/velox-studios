@@ -1,4 +1,4 @@
-window.onload = Loader
+window.addEventListener('load', Loader)
 
 function Loader() {
     Load();
