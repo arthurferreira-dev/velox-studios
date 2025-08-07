@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--SEO-->
     <title>Velox Studios</title>
     <meta name="description" content="Site oficial da Velox Studios, um estúdio que tem um futuro brilhante!">
     <meta name="keywords" content="vx studios, velox studios, descontrario, indie studio, desenvolvimento de jogos, indie">
@@ -40,8 +39,6 @@
     <!--Libs-->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">/*Tailwind CSS v4.1*/</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
-    <!--CSS Pure-->
-    <link rel="stylesheet" href="vx.css">
     <!--Favicons-->
     <link rel="shortcut icon" href="network/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" sizes="16x16" href="network/favicon/favicon-16x16.png" type="image/png">
@@ -50,115 +47,14 @@
     <link rel="icon" sizes="192x192" href="network/favicon/android-chrome-192x192.png" type="image/png">
     <link rel="icon" sizes="512x512" href="network/favicon/android-chrome-512x512.png" type="image/png">
     <link rel="manifest" href="network/favicon/site.webmanifest">
-</head>
-<body class="text-white bg-gray-700 overflow-x-hidden min-[1300px]:overflow-y-hidden">
-    <header class="p-2 bg-gray-500">
-        <div id="menu-responsive" class="flex flex-row flex-nowrap justify-between">
-            <img src="network/velox-studios.png" alt="Voxel Studios - Logo">
-            <div id="options-menu" class="flex flex-row flex-nowrap text-lg max-[500px]:text-base">
-                <button class="m-3 max-[500px]:m-2" onclick="Toggle('informations-options', 'arrow-down-line-games')">
-                    Jogos <i class="ri-arrow-down-s-line" id="arrow-down-line-games"></i> <!--<i class="ri-arrow-up-s-line"></i>-->
-                </button>
-                <button class="m-3 max-[500px]:m-1" onclick="Toggle('lore-options', 'arrow-down-line-lore')"> <!--colocar media query pro iphone 5-->
-                    Lore <i class="ri-arrow-down-s-line" id="arrow-down-line-lore"></i>
-                </button>
-                <button class="m-3 max-[500px]:m-2" onclick="Toggle('suporte-options', 'arrow-down-line-suport')">
-                    Suporte <i class="ri-arrow-down-s-line" id="arrow-down-line-suport"></i>
-                </button>
-                <button class="m-3 max-[500px]:m-1" onclick="Toggle('music-options', 'arrow-down-line-music')">
-                    Músicas <i class="ri-arrow-down-s-line" id="arrow-down-line-music"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-    <div id="informations-options" class="hidden bg-gray-700 p-1">
-        <div id="images-info" class="flex flex-col flex-wrap justify-center items-center">
-            <h1 class="text-3xl mb-3 mt-3 font-mono font-semibold max-[480px]:text-xl">DESCONTRARIO</h1>
-            <div id="imgs" class="flex flex-row flex-nowrap">
-                <img src="network/fino.png" alt="" 
-                class="mr-2 max-[500px]:w-[75px] max-[800px]:w-[200px] max-[1200px]:w-[280px] min-[1201px]:w-[290px] duration-[.52s] hover:scale-85">
-                <img src="network/spriter-game.png" alt="" 
-                class="max-[500px]:w-[180px] max-[800px]:w-[300px] max-[1200px]:w-[425px] min-[1201px]:w-[450px] duration-[.52s] hover:scale-90">
-            </div>
-            <button class="mt-5 mb-3 bg-green-500 p-2 duration-[.42s] w-[100px] rounded-md hover:bg-green-600 hover:cursor-pointer">
-                <a href="network/pages/descontrario.html">Veja mais</a>
-            </button>
-        </div>
-    </div>
-    <div id="lore-options" class="hidden bg-gray-700 p-1">
-        <div id="texts-info" class="flex flex-col flex-wrap justify-center items-center">
-            <h1 class="text-3xl mb-3 mt-3 font-mono font-semibold max-[480px]:text-2xl">Lore</h1>
-            <div id="texts" class="flex flex-col flex-wrap">
-                <p class="w-[600px] text-base max-[500px]:w-[80%] max-[500px]:m-auto">
-                    Há mais de muito tempo atrás, no espaço existia duas Auras que lutavam entre si, uma delas se chamava <strong>AuraLU</strong>, ela era responsável por ter o conhecimento da bondade, mas não tinha conhecimento nenhum da maldade, e o outro que se chamava <strong>AuraSR</strong>, e ele era responsável por trazer a maldade, mas ele não tinha o conhecimento da bondade, a luta deles duraram por anos ou até séculos, até que um dia um ser celestial enviou um ser que batizam de <strong>Good VX</strong>, ele foi responsável por selar os poderes das Auras em duas espadas, a espada da bondade e a espada da maldade, e após isso ele selou as duas Auras, em dois buracos negros mantendo um dos dois quilômetros e quilômetros de distâncias, e após isso antes de sei lá uma explosão acontece fazendo a criação dos universos, e após isso cada espada foi colocada em um lugar escondido em universos diferentes, ele deixou em cada universo uma peça dela para que seja quase impossível de ser completa, e se algum dia as duas espadas forem completas, por duas pessoas e essas duas pessoas se encontrarem, as duas Auras seriam libertas.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="suporte-options" class="hidden bg-gray-700 p-1">
-        <div id="infos" class="flex flex-col flex-wrap justify-center items-center">
-            <h1 class="text-3xl mb-3 mt-3 font-mono font-semibold max-[480px]:text-2xl" id="suporte-text">Suporte da VX Studios</h1>
-            <div id="text-img" class="flex flex-col flex-wrap">
-                <img src="network/discord.png" alt="Discord - Logo" class="w-[75px] h-[75px] m-auto mb-3">
-                <p class="w-[600px] text-base max-[500px]:w-[80%] max-[500px]:m-auto">
-                    <h2 class="text-lg mb-1">&#x1F50D; • DÚVIDAS OU AJUDA</h2>
-                    <p class="mb-3">
-                        Você tem alguma dúvida ou precisa de ajuda em alguma coisa sobre o jogo?
-                    </p>
-                    <h2 class="text-lg mb-1">&#x2694; • ERRO OU BUG</h2>
-                    <p class="mb-3">
-                        Encontrou algum erro ou bug?
-                    </p>
-                    <button class="mt-2 p-2 text-white w-[100px] m-auto rounded-md duration-[.41s]" id="btn-discord">
-                        Discord
-                    </button>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="music-options" class="hidden bg-gray-700 p-1">
-        <div id="infos" class="flex flex-col flex-wrap justify-center items-center">
-            <h1 class="text-3xl mb-3 mt-3 font-mono font-semibold max-[480px]:text-2xl" id="music-text">Músicas da VX Studios</h1>
-            <div id="text" class="flex flex-col flex-wrap">
-                <p class="w-[600px] text-base max-[500px]:w-[80%] max-[500px]:m-auto">
-                    Um som ecua dentro do reinado das Sombras, aonde esse som não e Visto como Algo Normal, não reconhecido como algo familiar.. mais sim conhecido como uma lenda nas eras antigas.. Mais antigas do que a era da criação, um som que poucos irão Reconhecer..
-                </p>
-                <div id="audio" class="mt-3">
-                    <audio src="network/music/Oficial_MineVX - Test - VX 2025-07-25 21_48.m4a" controls class="m-auto min-[1200px]:w-[600px] max-[800px]:w-[450px] max-[500px]:w-[300px]">
-                        <p class="text-lg text-center whitespace-nowrap text-nowrap max-[500px]:text-base">
-                            Seu dispositivo não é compatível com o formato <strong>.m4a</strong>!
-                        </p>
-                    </audio>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <main class="mt-4">
-        <div id="img-main">
-            <img src="" alt="" class="" id="img-principal">
-        </div>
-        <div class="flex flex-row flex-nowrap justify-center items-center">
-            <div id="desc-img" class="text-center absolute z-10">
-                <h1 class="text-2xl font-mono font-semibold bg-gray-800 w-[300px] m-auto p-1" id="title-border">
-                    Descontrario
-                </h1>
-                <p class="text-lg max-[500px]:text-base bg-gray-800 p-2 rounded-md">
-                    Se algum dia as duas espadas forem completas, por duas pessoas e essas duas pessoas se encontrarem, as duas <strong>Auras</strong> serão libertas
-                </p>
-            </div>
-        </div>
-        <br>
-        <div id="rest">
-            <h2 class="text-2xl text-center font-mono font-semibold mt-7 max-[500px]:mt-15">Em desenvolvimento..</h2>
-            <img src="network/gamemaker.png" alt="GameMaker - Logotipo" 
-            class="m-auto w-[100px]">
-            <p class="text-center text-lg">Caso queira contribuir com o projeto acesse nosso Server do <a href="" id="discord-text">Discord</a></p>
-        </div>
-    </main>
-    <div id="powered-badge" class="absolute bottom-[5] left-[0]">
-        <img src="network/badges/powered-by-vercel-badge.png" alt="Powered by Vercel" class="w-[245px] max-[501px]:w-[200px]">
-    </div>
+</head>
+<body class="flex flex-col flex-wrap justify-center items-center w-full h-[100vh] bg-neutral-600 text-white">
+    <h1 class="text-2xl mb-1">Atualização Pendente...</h1>
+    <img id="loading-anim" class="mb-4 mt-4">
+    <button class="bg-[#5865F2] p-2 rounded-lg duration-300 mt-2 hover:bg-[#515de0] hover:cursor-pointer">
+        Saiba mais <i class="ri-discord-fill text-xl"></i>
+    </button>
 </body>
-<script src="vx.js"></script>
+<script src="loading.js"></script>
 </html>
